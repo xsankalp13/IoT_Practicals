@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "annonmys",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 126.75, "left": 16.67, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -23.28,
+      "left": 68.34,
+      "attrs": { "temperature": "56.1", "humidity": "43.5" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "dht:GND", "black", [ "v-20", "*", "v5" ] ],
+    [ "uno:2", "dht:SDA", "green", [ "v-16", "*", "h0" ] ],
+    [ "uno:5V", "dht:VCC", "red", [ "v20", "*", "h0" ] ]
+  ],
+  "dependencies": {}
+}
